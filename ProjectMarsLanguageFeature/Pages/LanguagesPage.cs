@@ -37,23 +37,48 @@ namespace ProjectMarsLanguageFeature.Pages
             IWebElement addNewButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div"));
             addNewButton.Click();
             Thread.Sleep(3000);
+        }
 
+        public void InputLanguage(IWebDriver driver, string language, string level )
 
+        { 
             //Locate Language textbox and enter language
             IWebElement languageTextbox = driver.FindElement(By.Name("name"));
-            languageTextbox.SendKeys("Hindi");
+            languageTextbox.SendKeys(language);
             Thread.Sleep(6000);
 
 
             //Locate Choose level dropdown and click
+            
             IWebElement levelDropdown = driver.FindElement(By.Name("level"));
             levelDropdown.Click();
             Thread.Sleep(2000);
 
             //Locate option value and click
-            IWebElement optionValue = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select/option[2]"));
-            optionValue.Click();
-            Thread.Sleep(3000);
+            if (level == "Basic")
+            {
+                IWebElement optionValue = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select/option[2]"));
+                optionValue.Click();
+                Thread.Sleep(3000);
+            }
+            if (level == "Native")
+            {
+                IWebElement optionValue = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select/option[5]"));
+                optionValue.Click();
+                Thread.Sleep(3000);
+            }
+            if (level == "Fluent")
+            {
+                IWebElement optionValue = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select/option[4]"));
+                optionValue.Click();
+                Thread.Sleep(3000);
+            }
+            if (level == "Conversational")
+            {
+                IWebElement optionValue = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select/option[3]"));
+                optionValue.Click();
+                Thread.Sleep(3000);
+            }
 
             //Locate Add button and click
             IWebElement addButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[3]/input[1]"));
