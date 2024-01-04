@@ -13,7 +13,7 @@ namespace ProjectMarsLanguageFeature.Hooks
         [BeforeScenario("@tag1")]
         public void BeforeScenarioWithTag()
         {
-          
+
         }
 
         [BeforeScenario(Order = 1)]
