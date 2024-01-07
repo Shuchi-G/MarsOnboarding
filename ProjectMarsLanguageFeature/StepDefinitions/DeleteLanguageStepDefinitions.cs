@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using OpenQA.Selenium;
 using ProjectMarsLanguageFeature.Pages;
 using ProjectMarsLanguageFeature.Utilities;
 using System;
@@ -23,10 +25,19 @@ namespace ProjectMarsLanguageFeature.StepDefinitions
             deletePageObj.DeleteLanguage(driver);
         }
 
-        [Then(@"Existing languages deleted with delete message")]
-        public void ThenExistingLanguagesDeletedWithDeleteMessage()
+        [Then(@"Existing languages deleted successfully")]
+        public void ThenExistingLanguagesDeletedSuccessfully()
         {
-            Console.WriteLine("Delete is successful");
+            // Console.WriteLine("Delete is successful");
+            try
+            {
+                driver.FindElement(By.XPath("//*/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[3]/span[2]/i"));
+            }
+            catch (NoSuchElementException)
+            {
+                Assert.Pass("All languages are deleted");
+                    
+                    }
         }
 
     }

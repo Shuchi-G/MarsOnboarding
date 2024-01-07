@@ -12,6 +12,7 @@ namespace ProjectMarsLanguageFeature.StepDefinitions
     {
         LanguagesPage languagesPageObj = new LanguagesPage();
         DeleteAnExistingLanguage deletingObj = new DeleteAnExistingLanguage();
+        ContentReadLanguage readLanguageObj = new ContentReadLanguage();
        
         [When(@"I click on Add New buttons")]
         public void WhenIClickOnAddNewButtons()
@@ -25,12 +26,15 @@ namespace ProjectMarsLanguageFeature.StepDefinitions
             languagesPageObj.InputLanguage(driver, language, level);
         }
 
-        [Then(@"New languages should be added with add message")]
-        public void ThenNewLanguagesShouldBeAddedWithAddMessage()
+        [Then(@"'([^']*)' should be added")]
+        public void ThenShouldBeAdded(string language)
         {
-            Console.WriteLine("Language is added successfully");
+            Thread.Sleep(5000);
+            IWebElement languageRead = driver.FindElement(By.XPath("//div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]"));
+            Assert.That(languageRead.Text, Is.EqualTo(language), "language is not added");
         }
-    
+
+
 
         [Given(@"Add New button should be there")]
         public void GivenAddNewButtonShouldBeThere()
@@ -42,21 +46,32 @@ namespace ProjectMarsLanguageFeature.StepDefinitions
         [When(@"I click on Add New buttons to give invalid input")]
         public void WhenIClickOnAddNewButtonsToGiveInvalidInput()
         {
-            IWebElement newButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div"));
+            IWebElement newButton = driver.FindElement(By.XPath("//*/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div"));
             newButton.Click();
         }
 
         [When(@"I give space as input <'([^']*)'>,<'([^']*)'> for language")]
         public void WhenIGiveSpaceAsInputForLanguage(string language, string level)
         {
-            languagesPageObj.SpaceInput(driver, language = "    ", level = "Fluent");
+            languagesPageObj.SpaceInput(driver, language =" ", level = "Fluent");
         }
 
-                      [Then(@"New languages should not be added with add message")]
-        public void ThenNewLanguagesShouldNotBeAddedWithAddMessage()
+        [Then(@"<'([^']*)'> should not add")]
+        public void ThenShouldNotAdd(string language)
         {
-            Console.WriteLine("Language should not be added");
+            try
+            {
+                Thread.Sleep(5000);
+                IWebElement languageRead = driver.FindElement(By.XPath("//div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]"));
+                Assert.That(!string.IsNullOrEmpty(languageRead.Text), "language should not be added");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(" ");
+            }
         }
+
+       
 
         [When(@"I give input <'([^']*)'> to language but not choosen level of language")]
         public void WhenIGiveInputToLanguageButNotChoosenLevelOfLanguage(string language)
@@ -65,11 +80,15 @@ namespace ProjectMarsLanguageFeature.StepDefinitions
 
         }
 
-        [Then(@"language should not be added with add message")]
-        public void ThenLanguageShouldNotBeAddedWithAddMessage()
+        [Then(@"<'([^']*)'> should not be added")]
+        public void ThenShouldNotBeAdded(string language)
         {
-            Assert.Pass("Language should not add");
+            Thread.Sleep(5000);
+            IWebElement languageRead = driver.FindElement(By.XPath("//div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]"));
+            Assert.That(languageRead.Text, !Is.EqualTo(language), "language should not be added");
         }
+
+
 
         [When(@"I give existing input '([^']*)','([^']*)'  of language")]
         public void WhenIGiveExistingInputOfLanguage(string language, string level)
@@ -77,12 +96,26 @@ namespace ProjectMarsLanguageFeature.StepDefinitions
             languagesPageObj.DuplicateInput(driver, language, level);
         }
 
-      
-        [Then(@"Duplicate languages should not be added with add message")]
-        public void ThenDuplicateLanguagesShouldNotBeAddedWithAddMessage()
+        [Then(@"Duplicate '([^']*)' should not be added")]
+        public void ThenDuplicateShouldNotBeAdded(string language)
         {
-            Assert.Pass("Language should not add");
+            Thread.Sleep(3000);
+            for (int i = 1; i < 5; i++)
+            {
+                try
+                {
+                    string path = "//div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[" + i + "]/tr/td[1]";
+                    IWebElement contentLanguage = driver.FindElement(By.XPath(path));
+                    Thread.Sleep(3000);
+                    if (contentLanguage.Text == language && i != 1)
+                        Assert.Fail("Duplicate language should not be added");
+                    break;
+                }
+                catch (Exception ex) { Console.WriteLine(" "); }
+            }
         }
+
+
         
 
     }

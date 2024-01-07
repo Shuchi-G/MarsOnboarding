@@ -18,7 +18,8 @@ namespace ProjectMarsLanguageFeature.Pages
             {
                 while (true)
                 {
-                    IWebElement removeIconButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[3]/span[2]/i"));
+
+                    IWebElement removeIconButton = driver.FindElement(By.XPath("//*/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td[3]/span[2]/i"));
                     removeIconButton.Click();
                     Thread.Sleep(2000);
                 }

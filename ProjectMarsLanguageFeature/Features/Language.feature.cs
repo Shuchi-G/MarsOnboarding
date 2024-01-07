@@ -110,7 +110,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I click on Cross icon buttons", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 11
- testRunner.Then("Existing languages deleted with delete message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Existing languages deleted successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -119,10 +119,10 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("2. Add new languages with valid input")]
         [NUnit.Framework.CategoryAttribute("addLanguage")]
-        [NUnit.Framework.TestCaseAttribute("English", "Fluent", null)]
         [NUnit.Framework.TestCaseAttribute("Hindi", "Native", null)]
         [NUnit.Framework.TestCaseAttribute("Spaqwserdfggtt1234567890Spaqwserdfggtt1234567890", "Conversational", null)]
         [NUnit.Framework.TestCaseAttribute("J@#$%^CV", "Basic", null)]
+        [NUnit.Framework.TestCaseAttribute("English", "Fluent", null)]
         public virtual void _2_AddNewLanguagesWithValidInput(string language, string level, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -166,7 +166,7 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.When(string.Format("I give input \'{0}\',\'{1}\' of language", language, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 18
-  testRunner.Then("New languages should be added with add message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then(string.Format("\'{0}\' should be added", language), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -212,7 +212,7 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.When("I give space as input <\'language\'>,<\'level\'> for language", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 32
-  testRunner.Then("New languages should not be added with add message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("<\'language\'> should not add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -258,7 +258,7 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.When("I give input <\'language\'> to language but not choosen level of language", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 39
-  testRunner.Then("language should not be added with add message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("<\'language\'> should not be added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -266,8 +266,7 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("5. Add new language with dupliacte language input")]
-        [NUnit.Framework.TestCaseAttribute("Italian", "Basic", null)]
-        [NUnit.Framework.TestCaseAttribute("Italian", "Fluent", null)]
+        [NUnit.Framework.TestCaseAttribute("English", "Basic", null)]
         public virtual void _5_AddNewLanguageWithDupliacteLanguageInput(string language, string level, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
@@ -308,7 +307,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When(string.Format("I give existing input \'{0}\',\'{1}\'  of language", language, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 46
- testRunner.Then("Duplicate languages should not be added with add message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("Duplicate \'{0}\' should not be added", language), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
