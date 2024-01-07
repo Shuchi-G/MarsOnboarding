@@ -14,7 +14,6 @@ namespace ProjectMarsLanguageFeature.Pages
         {
 
             //Locate Pencil icon button and click
-            
             IWebElement pencilButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[3]/span[1]/i"));
             pencilButton.Click();
             Thread.Sleep(3000);
@@ -25,7 +24,6 @@ namespace ProjectMarsLanguageFeature.Pages
 
             //Locate existing language, remove it and add new language
             IWebElement updateLanguageTextbox = driver.FindElement(By.Name("name"));
-           // IWebElement updateLanguageTextbox = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody/tr/td/div/div[1]/input"));
             updateLanguageTextbox.Clear();
             updateLanguageTextbox.SendKeys("Gujrati");
 

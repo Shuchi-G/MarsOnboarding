@@ -31,7 +31,7 @@ namespace ProjectMarsLanguageFeature.StepDefinitions
         {
             Thread.Sleep(5000);
             IWebElement languageRead = driver.FindElement(By.XPath("//div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]"));
-            Assert.That(languageRead.Text, Is.EqualTo(language), "language is not added");
+            Assert.That(languageRead.Text, Is.EqualTo(language), "Language is not added");
         }
 
 
@@ -63,7 +63,7 @@ namespace ProjectMarsLanguageFeature.StepDefinitions
             {
                 Thread.Sleep(5000);
                 IWebElement languageRead = driver.FindElement(By.XPath("//div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]"));
-                Assert.That(!string.IsNullOrEmpty(languageRead.Text), "language should not be added");
+                Assert.That(!string.IsNullOrEmpty(languageRead.Text), "Language should not be added");
             }
             catch (Exception ex)
             {

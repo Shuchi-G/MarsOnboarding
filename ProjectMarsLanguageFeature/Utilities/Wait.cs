@@ -10,6 +10,7 @@ namespace ProjectMarsLanguageFeature.Utilities
 {
     public class Wait
     {
+        //Wait till either elment is clickable/element exist
         public static void WaitForClickable(IWebDriver driver, string locatorType, string locatorValue, int seconds)
         {
             var wait = new WebDriverWait(driver, new TimeSpan(0, 0, seconds));

@@ -10,11 +10,13 @@ namespace ProjectMarsLanguageFeature.Utilities
 {
     public class LanguageLevelOptions
     {
+        //Locating and clicking the Level dropdown
         public void LevelOptions(IWebDriver driver, string level)
         {
             IWebElement levelDropdown = driver.FindElement(By.Name("level"));
             levelDropdown.Click();
 
+            //Navigating through the level options
             if (level == "Basic")
             {
                 IWebElement optionValue = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select/option[2]"));

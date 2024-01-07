@@ -9,6 +9,7 @@ namespace ProjectMarsLanguageFeature.Utilities
 {
     public class LocateAndEnterLanguageTextbox
     {
+        //Locating and sending input to Language textbox
         public void LocateEnterLangText(IWebDriver driver, string language)
         {
             IWebElement languageTextbox = driver.FindElement(By.Name("name"));

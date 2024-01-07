@@ -9,10 +9,10 @@ namespace ProjectMarsLanguageFeature.Utilities
 {
     public class ContentReadLanguage
     {
+        //Locating the Language textbox and reading content
         public string ReadLanguage(IWebDriver driver) 
         {
             IWebElement languageRead = driver.FindElement(By.XPath("//div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]"));
-          // Console.WriteLine(languageRead.Text);
             return languageRead.Text;
         }
     }

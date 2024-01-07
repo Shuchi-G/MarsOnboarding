@@ -8,8 +8,7 @@ namespace ProjectMarsLanguageFeature.Hooks
     [Binding]
     public sealed class Hooks1 : CommonDriver
     {
-        // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
-
+        
         [BeforeScenario("@tag1")]
         public void BeforeScenarioWithTag()
         {

@@ -10,6 +10,7 @@ Scenario:1. Delete existing languages
 	When I click on Cross icon buttons
 	Then Existing languages deleted successfully
 
+
 @addLanguage
 Scenario Outline:2. Add new languages with valid input
 	Given Language Tab is selected in Profile Page/

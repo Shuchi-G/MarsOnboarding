@@ -28,7 +28,7 @@ namespace ProjectMarsLanguageFeature.StepDefinitions
         {
             Thread.Sleep(2000);
             IWebElement languageRead = driver.FindElement(By.XPath("//div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[1]/tr/td[1]"));
-            Assert.That(languageRead.Text, Is.EqualTo("Gujrati"), "language is not Updated");
+            Assert.That(languageRead.Text, Is.EqualTo("Gujrati"), "Language is not Updated");
         }
 
 

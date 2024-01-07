@@ -9,6 +9,7 @@ namespace ProjectMarsLanguageFeature.Utilities
 {
     public class LocateClickAddButton
     {
+        //Locating and clicking Add button
         public void ClickAddButton(IWebDriver driver)
         {
             

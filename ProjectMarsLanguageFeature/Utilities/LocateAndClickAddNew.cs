@@ -9,6 +9,7 @@ namespace ProjectMarsLanguageFeature.Utilities
 {
     public class LocateAndClickAddNew
     {
+        //Locating and clicking Add New button
         public void LocateClickAddNew(IWebDriver driver)
         {
             IWebElement addNewButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div"));
