@@ -6,7 +6,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectMarsLanguageFeature.Utilities
+namespace ProjectMarsLanguageFeature.Support
 {
     public class LanguageLevelOptions
     {
@@ -31,7 +31,7 @@ namespace ProjectMarsLanguageFeature.Utilities
             {
                 IWebElement optionValue = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select/option[4]"));
                 optionValue.Click();
-              
+
             }
             if (level == "Conversational")
             {

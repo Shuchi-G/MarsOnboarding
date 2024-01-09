@@ -1,7 +1,8 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
+using ProjectMarsLanguageFeature.Drivers;
 using ProjectMarsLanguageFeature.Pages;
-using ProjectMarsLanguageFeature.Utilities;
+using ProjectMarsLanguageFeature.Support;
 using System;
 using TechTalk.SpecFlow;
 
@@ -13,7 +14,7 @@ namespace ProjectMarsLanguageFeature.StepDefinitions
         LanguagesPage languagesPageObj = new LanguagesPage();
         DeleteAnExistingLanguage deletingObj = new DeleteAnExistingLanguage();
         ContentReadLanguage readLanguageObj = new ContentReadLanguage();
-       
+
         [When(@"I click on Add New buttons")]
         public void WhenIClickOnAddNewButtons()
         {
@@ -53,7 +54,7 @@ namespace ProjectMarsLanguageFeature.StepDefinitions
         [When(@"I give space as input <'([^']*)'>,<'([^']*)'> for language")]
         public void WhenIGiveSpaceAsInputForLanguage(string language, string level)
         {
-            languagesPageObj.SpaceInput(driver, language =" ", level = "Fluent");
+            languagesPageObj.SpaceInput(driver, language = " ", level = "Fluent");
         }
 
         [Then(@"<'([^']*)'> should not add")]
@@ -63,15 +64,15 @@ namespace ProjectMarsLanguageFeature.StepDefinitions
             {
                 Thread.Sleep(5000);
                 IWebElement languageRead = driver.FindElement(By.XPath("//div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]"));
-                Assert.That(!string.IsNullOrEmpty(languageRead.Text), "Language should not be added");
+                Assert.That(!string.IsNullOrEmpty(languageRead.Text), "Space should not be added");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Console.WriteLine(" ");
             }
         }
 
-       
+
 
         [When(@"I give input <'([^']*)'> to language but not choosen level of language")]
         public void WhenIGiveInputToLanguageButNotChoosenLevelOfLanguage(string language)
@@ -111,15 +112,10 @@ namespace ProjectMarsLanguageFeature.StepDefinitions
                         Assert.Fail("Duplicate language should not be added");
                     break;
                 }
-                catch (Exception ex) { Console.WriteLine(" "); }
+                catch (Exception) { Console.WriteLine(" "); }
             }
         }
 
-
-        
-
     }
-
-
 
 }

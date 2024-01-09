@@ -1,9 +1,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
+using ProjectMarsLanguageFeature.Drivers;
 using ProjectMarsLanguageFeature.Pages;
-using ProjectMarsLanguageFeature.Utilities;
-using System;
-using TechTalk.SpecFlow;
 
 namespace ProjectMarsLanguageFeature.StepDefinitions
 {

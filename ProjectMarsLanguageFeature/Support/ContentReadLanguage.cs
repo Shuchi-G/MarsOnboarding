@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectMarsLanguageFeature.Utilities
+namespace ProjectMarsLanguageFeature.Support
 {
     public class ContentReadLanguage
     {
         //Locating the Language textbox and reading content
-        public string ReadLanguage(IWebDriver driver) 
+        public string ReadLanguage(IWebDriver driver)
         {
             IWebElement languageRead = driver.FindElement(By.XPath("//div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]"));
             return languageRead.Text;

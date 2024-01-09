@@ -1,13 +1,14 @@
 ﻿using OpenQA.Selenium.Chrome;
-using ProjectMarsLanguageFeature.Drivers;
-using ProjectMarsLanguageFeature.Pages;
+using SkillFeature_Mars.Drivers;
+using SkillFeature_Mars.Pages;
 using TechTalk.SpecFlow;
 
-namespace ProjectMarsLanguageFeature.Hooks
+namespace SkillFeature_Mars
 {
     [Binding]
     public sealed class Hooks1 : CommonDriver
     {
+
 
         [BeforeScenario("@tag1")]
         public void BeforeScenarioWithTag()
@@ -18,7 +19,6 @@ namespace ProjectMarsLanguageFeature.Hooks
         [BeforeScenario(Order = 1)]
         public void FirstBeforeScenario()
         {
-
             driver = new ChromeDriver();
             SignInPage signInPageObj = new SignInPage();
             signInPageObj.LoginActions(driver);

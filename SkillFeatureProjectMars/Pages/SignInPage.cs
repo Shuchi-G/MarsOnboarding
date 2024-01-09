@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ProjectMarsLanguageFeature.Support;
+using SkillFeature_Mars.Support;
 
-namespace ProjectMarsLanguageFeature.Pages
+namespace SkillFeature_Mars.Pages
 {
     public class SignInPage
     {
@@ -37,6 +37,10 @@ namespace ProjectMarsLanguageFeature.Pages
             IWebElement loginButton = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[4]/button"));
             loginButton.Click();
             Thread.Sleep(3000);
+
+            //Navigating to Skill Page
+            IWebElement skillTab = driver.FindElement(By.XPath("//div/section[2]/div/div/div/div[3]/form/div[1]/a[2]"));
+            skillTab.Click();
 
         }
     }

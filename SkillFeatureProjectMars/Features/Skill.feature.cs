@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace ProjectMarsLanguageFeature.Features
+namespace SkillFeature_Mars.Features
 {
     using TechTalk.SpecFlow;
     using System;
@@ -20,23 +20,23 @@ namespace ProjectMarsLanguageFeature.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Language")]
-    public partial class LanguageFeature
+    [NUnit.Framework.DescriptionAttribute("Skill")]
+    public partial class SkillFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "Language.feature"
+#line 1 "Skill.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Language", "As a Mars Portal User,\r\nI want to add, delete and Edit language feature.\r\nSo that" +
-                    " the people seeking for the languages can look at what details I hold.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Skill", "As a Mars Portal User,\r\nI want to add, delete and Edit Skill feature.\r\nSo that th" +
+                    "e people seeking for the skill can look at what details I hold.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,15 +75,15 @@ namespace ProjectMarsLanguageFeature.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("1. Delete existing languages")]
-        [NUnit.Framework.CategoryAttribute("deleteLanguage")]
-        public virtual void _1_DeleteExistingLanguages()
+        [NUnit.Framework.DescriptionAttribute("1. Delete existing Skill")]
+        [NUnit.Framework.CategoryAttribute("deleteSkill")]
+        public virtual void _1_DeleteExistingSkill()
         {
             string[] tagsOfScenario = new string[] {
-                    "deleteLanguage"};
+                    "deleteSkill"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1. Delete existing languages", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 8
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1. Delete existing Skill", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -103,40 +103,40 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 9
- testRunner.Given("Language Tab is selected in Profile Page/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
 #line 10
- testRunner.When("I click on Cross icon buttons", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("Skill Tab is selected in Profile Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 11
- testRunner.Then("Existing languages deleted successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I click on Cross icon buttons", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 12
+ testRunner.Then("Existing skill delete successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("2. Add new languages with valid input")]
-        [NUnit.Framework.CategoryAttribute("addLanguage")]
-        [NUnit.Framework.TestCaseAttribute("Hindi", "Native", null)]
-        [NUnit.Framework.TestCaseAttribute("Spaqwserdfggtt1234567890Spaqwserdfggtt1234567890", "Conversational", null)]
-        [NUnit.Framework.TestCaseAttribute("J@#$%^CV", "Basic", null)]
-        [NUnit.Framework.TestCaseAttribute("English", "Fluent", null)]
-        public virtual void _2_AddNewLanguagesWithValidInput(string language, string level, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("2. Add new skill with valid input")]
+        [NUnit.Framework.CategoryAttribute("addSkill")]
+        [NUnit.Framework.TestCaseAttribute("Specflow", "Beginner", null)]
+        [NUnit.Framework.TestCaseAttribute("123", "Intermediate", null)]
+        [NUnit.Framework.TestCaseAttribute("C#@$%", "Expert", null)]
+        [NUnit.Framework.TestCaseAttribute("qwert12345yugfdawwer!@#$%^&&*()KJJHHhhhh()))))000000", "Beginner", null)]
+        public virtual void _2_AddNewSkillWithValidInput(string skill, string level, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "addLanguage"};
+                    "addSkill"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("language", language);
+            argumentsOfScenario.Add("skill", skill);
             argumentsOfScenario.Add("level", level);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2. Add new languages with valid input", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 15
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2. Add new skill with valid input", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 16
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -156,30 +156,30 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 16
- testRunner.Given("Language Tab is selected in Profile Page/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
 #line 17
- testRunner.When("I click on Add New buttons", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("Skill Tab is selected in Profile Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 18
- testRunner.When(string.Format("I give input \'{0}\',\'{1}\' of language", language, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click on Add New buttons", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 19
- testRunner.Then(string.Format("\'{0}\' should be added", language), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When(string.Format("I give input \'{0}\',\'{1}\' of skill", skill, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 20
+ testRunner.Then(string.Format("\'{0}\' should be added", skill), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("3.Add new language with invalid input")]
-        public virtual void _3_AddNewLanguageWithInvalidInput()
+        [NUnit.Framework.DescriptionAttribute("3.Add new skill with invalid input in Skill textbox")]
+        public virtual void _3_AddNewSkillWithInvalidInputInSkillTextbox()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("3.Add new language with invalid input", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 28
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("3.Add new skill with invalid input in Skill textbox", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 29
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -199,32 +199,29 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 29
- testRunner.Given("Language Tab is selected in Profile Page/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
 #line 30
- testRunner.Given("Add New button should be there", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("Skill Tab is selected in Profile Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 31
  testRunner.When("I click on Add New buttons to give invalid input", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 32
- testRunner.When("I give space as input <\'language\'>,<\'level\'> for language", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I give space as input <\'skill\'>,<\'level\'> for skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 33
- testRunner.Then("<\'language\'> should not add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("<\'skill\'> should not add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("4.Add new language without chossing any level")]
-        public virtual void _4_AddNewLanguageWithoutChossingAnyLevel()
+        [NUnit.Framework.DescriptionAttribute("4.Add new skill without choosing any level")]
+        public virtual void _4_AddNewSkillWithoutChoosingAnyLevel()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("4.Add new language without chossing any level", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("4.Add new skill without choosing any level", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 35
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -246,35 +243,32 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 36
- testRunner.Given("Language Tab is selected in Profile Page/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("Skill Tab is selected in Profile Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 37
- testRunner.Given("Add New button should be there", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 38
  testRunner.When("I click on Add New buttons to give invalid input", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 39
- testRunner.When("I give input <\'language\'> to language but not choosen level of language", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 38
+ testRunner.When("I give input <\'skill\'> to skill but not choosen level of skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 40
- testRunner.Then("<\'language\'> should not be added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 39
+ testRunner.Then("<\'skill\'> should not be added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("5. Add new language with dupliacte language input")]
-        [NUnit.Framework.TestCaseAttribute("English", "Basic", null)]
-        public virtual void _5_AddNewLanguageWithDupliacteLanguageInput(string language, string level, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("5. Add new skill with dupliacate skill input")]
+        [NUnit.Framework.TestCaseAttribute("Specflow", "Beginner", null)]
+        public virtual void _5_AddNewSkillWithDupliacateSkillInput(string skill, string level, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("language", language);
+            argumentsOfScenario.Add("skill", skill);
             argumentsOfScenario.Add("level", level);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("5. Add new language with dupliacte language input", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 42
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("5. Add new skill with dupliacate skill input", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 41
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -294,35 +288,32 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
+#line 42
+ testRunner.Given("Skill Tab is selected in Profile Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
 #line 43
- testRunner.Given("Language Tab is selected in Profile Page/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 44
- testRunner.Given("Add New button should be there", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 45
  testRunner.When("I click on Add New buttons", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 46
- testRunner.When(string.Format("I give existing input \'{0}\',\'{1}\'  of language", language, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 44
+ testRunner.When(string.Format("I give existing input \'{0}\',\'{1}\'  of skill", skill, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 47
- testRunner.Then(string.Format("Duplicate \'{0}\' should not be added", language), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 45
+ testRunner.Then(string.Format("Duplicate \'{0}\' should not be added", skill), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("6. Editing existing languages")]
+        [NUnit.Framework.DescriptionAttribute("6. Editing existing skill")]
         [NUnit.Framework.CategoryAttribute("updateLanguage")]
-        public virtual void _6_EditingExistingLanguages()
+        public virtual void _6_EditingExistingSkill()
         {
             string[] tagsOfScenario = new string[] {
                     "updateLanguage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("6. Editing existing languages", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 55
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("6. Editing existing skill", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 53
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -342,17 +333,17 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 56
- testRunner.Given("Language Tab is selected in Profile Page/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 54
+ testRunner.Given("Skill Tab is selected in Profile Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 57
+#line 55
  testRunner.When("I click on Pencil icon buttons", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 58
- testRunner.When("I update language and level of language", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 56
+ testRunner.When("I update skill and level of skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 59
- testRunner.Then("Language and level should be updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 57
+ testRunner.Then("skill and level should be updated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

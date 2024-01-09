@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjectMarsLanguageFeature.Utilities 
+namespace ProjectMarsLanguageFeature.Support
 {
     public class LocateAndEnterLanguageTextbox
     {
